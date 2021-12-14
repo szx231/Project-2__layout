@@ -6,6 +6,7 @@
   --white-rgb: 255,255,255;
   --blue: #3671E9;
   --purple: #2B076E;
+  --purple-rgb: rgba(43, 7, 110, 0,2);
 }
 
 body {
@@ -116,14 +117,12 @@ nav-item--login {
   margin-top: 26px;
   line-height: 1.2;
   margin-bottom: 24px;
-  
 }
 
 .main-text__description {
   color: #E0E0E0;
   line-height: 1.6;
   max-width: 400px;
-  margin-bottom: 57px;
 }
 
 .main-text__link {
@@ -157,7 +156,7 @@ nav-item--login {
   padding-bottom: 196px;
 }
 
-.stat-item{
+.stat-item {
   display: flex;
   align-items: center;
 }
@@ -214,6 +213,7 @@ font-weight: 700;
   line-height: 1.5;
   max-width: 630px;
   margin: 0 auto;
+  margin-bottom: 48px;
 }
 
 .calc-head {
@@ -276,6 +276,7 @@ font-weight: 700;
 .page-light {
   background: #f8F8FB;
   color: var(--dark);
+  padding-bottom: 99px;
 }
 
 .page-ligth__title {
@@ -284,6 +285,7 @@ font-weight: 700;
   text-align: center;
   max-width: 741px;
   margin: 0 auto;
+  line-height: 1.5;
 }
 .calc-foot {
   max-width: 942px;
@@ -292,6 +294,7 @@ font-weight: 700;
   background-color: var(--white);
   border-radius: 0 0 16px 16px;
   box-sizing: border-box;
+  margin-bottom: 105px;
 }
 
 .calc-foot__title {
@@ -325,19 +328,30 @@ font-weight: 700;
   justify-content: space-between;
   align-items: flex-start;
   text-align: center;
+  margin-top: 57px;
+  padding-bottom: 100px;
 }
 
 .crypto-item {
   background-color: var(--white);
+  color: var(--dark);
   border-radius: 16px;
-  flex: 0 0 32%;
-  padding: 30px 30px;
+  flex: 0 0 31%;
+  padding: 52px 30px 47px;
   box-sizing: border-box;
+  transition: .2s ease background-color, .2s ease color;
+}
+
+.crypto-item:hover {
+  background-color: var(--purple);
+  color: var(--white);
 }
 
 .crypto-item__title {
   font-size: 32px;
   font-weight: 700;
+  margin-top: 47px;
+  margin-bottom: 21px;
 }
 
 .crypto-item__title sup {
@@ -350,4 +364,149 @@ font-weight: 700;
   font-size: 16px;
   color: #828282;
   line-height: 1.5;
+  transition: .2s ease color;
+  line-height: 1.7;
+  transition: .2s ease color;
+  margin-bottom: 25px;
+}
+
+.crypto-item:hover .crypto-item__description {
+  color: var(--white);
+}
+
+.crypto-item__btn {
+  background-color: var(--white);
+  font-size: 18px;
+  color: var(--white);
+  text-decoration: none;
+  border-radius: 32px;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 205px;
+  margin: 0 auto;
+  transition: .2s ease background-color;
+}
+
+.crypto-item:hover .crypto-item__btn{
+  background-color: var(--blue);
+}
+.crypto-item_text {
+  font-size: 18px;
+  font-weight: 500;
+  width: 0px;
+  transition: .2s ease width;
+}
+.crypto-item:hover .crypto-item_text {
+  width: 133px;
+}
+
+.crypto-item_icon {
+  background-color: var(--white);
+  width: 64px;
+  height: 64px;
+  display: block;
+  border-radius: 100%;
+  background-image: url(/img/arrow.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  border: 2px solid #2B076E33;
+  transform: scale(1);
+  transition: .2s ease border, .2s ease transform;
+}
+
+.crypto-item__btn:hover .crypto-item_icon {
+  border: 2px solid var(--white);
+  transform: scale(0.5);
+}
+
+.page-gradient {
+  background: linear-gradient(180deg, var(--purple), var(--dark));
+  padding-top: 88px;
+  padding-bottom: 88px;
+}
+
+.form {
+  background-color: var(--blue);
+  border-radius: 16px;
+  display: flex;
+  justify-content: space-between;
+  padding: 54px 50px;
+}
+
+.form-text {
+  flex-grow: 1;
+}
+
+.form-text__title {
+  margin-top: 0;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 27px;
+}
+
+.form-text__description {
+  font-size: 16px;
+  margin: 0;
+  max-width: 348px;
+  line-height: 1.5;
+}
+
+.form-letter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 0 0 566px;
+}
+.form-letter__input {
+  font-size: 16px;
+  border: none;
+  border-bottom: 1px solid var(--white);
+  background-color: transparent;
+  color: var(--white);
+  width: 100%;
+  margin-right: 40px;
+  padding: 10px 0
+}
+
+.form-letter__input::placeholder {
+  color: var(--white);
+}
+
+.form-letter__btn {
+  border: none;
+  background-color: var(--white);
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--dark);
+  padding: 10px 32px;
+  border-radius: 32px;
+
+}
+
+.footer {
+  max-width: 1202px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 15px;
+}
+
+.footer-list {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  align-items: center;
+}
+
+.footer-list__item {
+  margin-left: 32px;
+}
+
+.footer-list__item:first-child {
+  margin-left: 0;
 }
